@@ -255,7 +255,7 @@ export const IndexComponent = () => {
                     console.log(data)
                 })
         }
-    }, [location])
+    }, [location, appId])
 
     // Five Days
     useEffect(() => {
@@ -267,7 +267,7 @@ export const IndexComponent = () => {
                     console.log(forecastByDay);
                 })
         }
-    }, [location])
+    }, [location, appId])
 
     //Unsplash
     useEffect(() => {
@@ -282,7 +282,7 @@ export const IndexComponent = () => {
             })
             .catch(error => console.log(error));
         }
-    }, [city, weather]);
+    }, [city, weather, clientId]);
 
     const searchPlaces = debounce(async (place) => {
         if (!place.trim()) return
