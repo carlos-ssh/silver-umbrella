@@ -1,3 +1,4 @@
+'use client';
 import { HomePage } from './home/HomePage'
 import styled from '@emotion/styled'
 
