@@ -55,9 +55,21 @@ jobs:
         uses: actions/upload-pages-artifact@v3
 
   deploy:
+    name: Deploy to Vercel
     runs-on: ubuntu-latest
-    needs: build
+    permissions:
+      contents: read
+      deployments: write
+      statuses: write
+
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@v3
+
+      - uses: nexterias/actions-vercel@v1
+        with:
+          token: ${{ secrets.VERCEL_TOKEN }}
+          org-id: ${{ secrets.VERCEL_ORG_ID }}
+          project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          production: ${{ github.ref == 'refs/heads/main' }}
+          prebuilt: true
