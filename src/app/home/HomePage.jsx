@@ -13,7 +13,6 @@ export const HomePage = () => {
         <MainContainer>
             <NavbarComponent />
             <IndexComponent />
-            HomePage
         </MainContainer>
     )
 }

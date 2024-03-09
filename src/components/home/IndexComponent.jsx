@@ -56,7 +56,6 @@ const ResultsContainer = styled.div`
     max-height: 500px;
     z-index: 10;
     position: relative;
-
 `
 
 const Container = styled.div`
@@ -73,6 +72,7 @@ const Container = styled.div`
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    z-index: 1000;
 
     &::-webkit-scrollbar {
         display: none;
@@ -147,7 +147,7 @@ const DaysContainer = styled.div`
 const CardsContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: between;
+    justify-content: space-between;
     align-items: center;
     padding: 10px;
     width: 100%;
