@@ -32,6 +32,10 @@ const WeatherContainer = styled.div`
         position: relative;
         z-index: 1;
     }
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+    }
 `;
 
 const DisplayWeather = styled.div`
