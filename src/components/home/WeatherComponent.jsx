@@ -7,7 +7,7 @@ const WeatherContainer = styled.div`
     justify-content: center;
     align-items: center;
     border-radius: 10px;
-    max-width: 90%;
+    max-width: 53%;
     margin: 0 auto;
     width: 100%;
     background-image: url(${(props) => props.backgroundImageUrl});
@@ -87,7 +87,7 @@ export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
                 <div>
                     <DisplayWeather>
                         <MainWeatherContainer>
-                            <DegreesText>{`${ weather.main.temp }°C`}</DegreesText>
+                            <DegreesText>{`${ Math.round(weather.main.temp) }°C`}</DegreesText>
                             <DataWeather>
                                 <h2>{ weather.name || city }</h2>
                                 <p>{`${ weather.weather[0].description }`}</p>
@@ -95,11 +95,11 @@ export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
                         </MainWeatherContainer>
                         <MinMaxContainer>
                             <MinContainer>
-                                <p>{ weather.main.temp_min }</p>
+                                <p>{ `${Math.round(weather.main.temp_min)} °C` }</p>
                                 <p>Min</p>
                             </MinContainer>
                             <MaxContainer>
-                                <p>{ weather.main.temp_max }</p>
+                                <p>{ `${Math.round(weather.main.temp_max)} °C` }</p>
                                 <p>Max</p>
                             </MaxContainer>
                         </MinMaxContainer>
