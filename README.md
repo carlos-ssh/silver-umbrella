@@ -1,10 +1,18 @@
+---
+runme:
+  id: 01HRPW613F6P4SZ9WG082VFJ2J
+  version: v3
+---
+
+[![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
 First, run the development server:
 
-```bash
+```bash {"id":"01HRPW613DTR6R69WEZ99N105A"}
 npm run dev
 # or
 yarn dev
