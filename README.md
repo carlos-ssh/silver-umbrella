@@ -4,7 +4,6 @@ runme:
   version: v3
 ---
 
-```
 # 🚀 Running Reservamos - Weather Project Locally
 
 [![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
@@ -31,14 +30,14 @@ npm -v
 
 Before starting, you need to set up the required environment variables. You will need:
 
-- `API_KEY`: Your API key for connecting with an external service.
-- `DATABASE_URL`: The URL for your database.
+- `NEXT_PUBLIC_UNSPLASH_CLIENT_ID`: Your API key for connecting with Unsplash service.
+- `NEXT_PUBLIC_OPENWEATHER_APP_ID`: Your API key for connecting with OpenWeather service.
 
 Create a `.env.local` file at the root of your project and add the following lines:
 
 ```env
-API_KEY=your_api_key_here
-DATABASE_URL=your_database_url_here
+NEXT_PUBLIC_UNSPLASH_CLIENT_ID=your_api_key_here
+NEXT_PUBLIC_OPENWEATHER_APP_ID=your_database_url_here
 ```
 
 Be sure to replace `your_api_key_here` and `your_database_url_here` with your actual values.
