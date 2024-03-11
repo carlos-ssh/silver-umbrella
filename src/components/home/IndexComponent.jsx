@@ -9,7 +9,6 @@ import { WeatherComponent } from './WeatherComponent'
 import { ForecastComponent } from './ForecastComponent'
 
 const MainContainer = styled.div`
-    width: 100%;
     background-color: #d4d4d4;
     opacity: 0.9;
     display: flex;
@@ -33,8 +32,6 @@ const DaysContainer = styled.div`
     flex-direction: row;
     justify-items: center;
     align-items: center;
-    padding: 10px;
-    width: 100%;
     color: #000;
 `
 
@@ -52,8 +49,8 @@ export const IndexComponent = () => {
 
     useEffect(() => {
         const success = (position) => {
-            const latitude = position.latitude
-            const longitude = position.longitude
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
             setLocation({ latitude, longitude })
         }
 

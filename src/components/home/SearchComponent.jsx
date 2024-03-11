@@ -8,9 +8,7 @@ const SearchContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     width: 100%;
-
 `
 
 const debounce = (func, wait) => {

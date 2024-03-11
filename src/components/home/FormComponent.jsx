@@ -4,21 +4,20 @@ const FormContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     width: 100%;
 `
 
 const Input = styled.input`
-    width: 100%;
-    padding: 10px;
+    width: 90%;
+    padding: 10px 7px;
     border: none;
     border-radius: 10px;
+    margin: auto;
 `
 
 export const FormComponent = ({
     handleInputChange,
-    selectedPlace,
-    city
+    selectedPlace
 }) => {
     return (
         <FormContainer>
