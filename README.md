@@ -8,8 +8,6 @@ runme:
 
 [![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
 
-[![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
-
 Welcome to Reservamos - Weather project! This guide is here to walk you through getting your project up and running on your local machine. Before we dive in, ensure you have `Node.js` installed on your system. This project requires two environment variables to function correctly.
 
 ## 📋 Prerequisites
@@ -47,7 +45,13 @@ Be sure to replace `your_api_key_here` and `your_database_url_here` with your ac
 After setting up your environment variables, follow these steps to start your project:
 
 1. Open your terminal.
-2. Change to your project's directory (if you're not there already).
+2. Clone this repo into your computer or download it
+
+```bash
+https://github.com/carlos-ssh/silver-umbrella.git
+```
+
+3. Go to your project's directory.
 
 ```bash
 cd path/to/your/project
