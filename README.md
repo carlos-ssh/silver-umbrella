@@ -4,41 +4,79 @@ runme:
   version: v3
 ---
 
+```
+# 🚀 Running Reservamos - Weather Project Locally
+
 [![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+[![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
 
-## Getting Started
+Welcome to Reservamos - Weather project! This guide is here to walk you through getting your project up and running on your local machine. Before we dive in, ensure you have `Node.js` installed on your system. This project requires two environment variables to function correctly.
 
-First, run the development server:
+## 📋 Prerequisites
 
-```bash {"id":"01HRPW613DTR6R69WEZ99N105A"}
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+You need the following installed to run this project:
+
+- Node.js (v20.9.0)
+- npm (comes installed with Node.js)
+
+You can check if you already have Node.js and npm installed and their versions by running the following commands in your terminal:
+
+```bash
+node -v
+npm -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Setup
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Before starting, you need to set up the required environment variables. You will need:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- `API_KEY`: Your API key for connecting with an external service.
+- `DATABASE_URL`: The URL for your database.
 
-## Learn More
+Create a `.env.local` file at the root of your project and add the following lines:
 
-To learn more about Next.js, take a look at the following resources:
+```env
+API_KEY=your_api_key_here
+DATABASE_URL=your_database_url_here
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Be sure to replace `your_api_key_here` and `your_database_url_here` with your actual values.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## 🚀 Instructions to Start
 
-## Deploy on Vercel
+After setting up your environment variables, follow these steps to start your project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Open your terminal.
+2. Change to your project's directory (if you're not there already).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+cd path/to/your/project
+```
+
+3. Install the project's dependencies with npm.
+
+```bash
+npm install
+```
+
+4. Run the project locally.
+
+```bash
+npm run dev
+```
+
+This will start your NextJS development server on `http://localhost:3000`. Open your browser and visit this address to see your project running!
+
+## 🤝 Contributing
+
+Contributions to this project are welcome! If you have a suggestion for improvement or encounter any issues, feel free to create an issue or send a pull request.
+
+## 📝 License
+
+This project is under the MIT License. For more details, see the `LICENSE` file in this repository.
+
+---
+
+That's all! With these steps, you should be able to run your Reservamos - Weather locally without any issues. If you have any questions, don't hesitate to ask!
+```

@@ -27,7 +27,6 @@ const WeatherContainer = styled.div`
         border-radius: 10px;
     }
 
-
     > div {
         position: relative;
         z-index: 1;
