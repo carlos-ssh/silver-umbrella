@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
 
 const FooterContainer = styled.div`
-    position: absolute;
+    position: sticky;
     bottom: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     max-width: 100%;
