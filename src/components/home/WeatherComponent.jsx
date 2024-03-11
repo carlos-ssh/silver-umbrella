@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { Spinner } from '../navigation/SpinnerComponent';
 
 const WeatherContainer = styled.div`
     position: relative;
@@ -48,15 +49,27 @@ const WeatherDescription = styled.div`
     justify-items: space-around;
     gap: 10px;
 `
+
+const MinMaxContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-items: space-between;
+`
+
 export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
     return (
         <WeatherContainer backgroundImageUrl={backgroundImageUrl}>
             {weather ? (
                 <div>
                     <DisplayWeather>
-                        <DegreesText>{`${weather.main.temp}°C`}</DegreesText>
                         <h2>{weather.name || city}</h2>
+                        <DegreesText>{`${weather.main.temp}°C`}</DegreesText>
                         <p>{`${weather.weather[0].description}`}</p>
+                        <MinMaxContainer>
+                            <p>{`Min ${weather.main.temp_min}`}</p>
+                            <p>{`Max ${weather.main.temp_max}`}</p>
+                        </MinMaxContainer>
                     </DisplayWeather>
                     <WeatherDescription>
                         <p>{`Humedad: ${weather.main.humidity}%`}</p>
@@ -64,7 +77,7 @@ export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
                     </WeatherDescription>
                 </div>
             ) : (
-                <p>Cargando datos del clima...</p>
+                <Spinner />
             )}
         </WeatherContainer>
     );

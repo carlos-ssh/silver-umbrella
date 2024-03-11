@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled'
 
 const NavbarContainer = styled.div`
-    background-color: #000;
+    background-color: #333;
     color: #f9f9f9;
     min-height: 60px;
     display: flex;
@@ -15,6 +15,7 @@ const NavTitleLink = styled.a`
     color: #f9f9f9;
     text-decoration: none;
     margin-right: 15px;
+    font-weight: bold;
 `
 
 export const NavbarComponent = () => {

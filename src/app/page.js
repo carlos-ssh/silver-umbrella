@@ -2,6 +2,7 @@
 import { HomePage } from './home/HomePage'
 import styled from '@emotion/styled'
 import './globals.css'
+import FooterComponent from '@/components/navigation/FooterComponent';
 
 const Main = styled.main`
   display: flex;

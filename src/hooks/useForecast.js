@@ -32,7 +32,6 @@ export const useForecast = (location, appId) => {
             fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=${appId}&lang=es`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data.list);
                     const forecastByDay = organizeForecastByDay(data.list);
                     setForecast(forecastByDay);
                 })
@@ -43,6 +42,6 @@ export const useForecast = (location, appId) => {
     useEffect(() => {
         fetchForecast();
     }, [fetchForecast]);
-    console.log(days);
+
     return { forecast, days };
 };
