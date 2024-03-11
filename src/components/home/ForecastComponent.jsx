@@ -4,6 +4,16 @@ import styled from '@emotion/styled'
 const ForecastContainer = styled.div`
     overflow-x: hidden;
 `
+
+const TitleDays = styled.h3`
+    text-align: center;
+
+    @media (max-width: 768px) {
+        width: 60%;
+        margin: 20px auto 10px auto;
+    }
+`
+
 const CardsContainer = styled.div`
     display: flex;
     flex-direction: row;
@@ -72,7 +82,7 @@ export const ForecastComponent = ({ days, city }) => {
 
     return (
         <ForecastContainer>
-            <h3>El clima en los siguientes 5 días en { city }</h3>
+            <TitleDays>El clima en los siguientes 5 días en { city }</TitleDays>
             { days ? (
                     <CardsContainer>
                         {Object.keys(days).map((day, index) => (
