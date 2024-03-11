@@ -41,7 +41,7 @@ const Card = styled.div`
     color: #333;
     cursor: pointer;
     min-width: 220px;
-    padding: 20px;
+    padding: 10px;
 
     @media (max-width: 768px) {
         min-width: 220px;
@@ -80,6 +80,19 @@ const MinMaxText = styled.p`
     }
 `
 
+const WeatherCardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.1;
+`
+
+const TextContainer = styled.div`
+    line-height: 0.1;
+    text-align: center;
+`
+
 export const ForecastComponent = ({ days, city }) => {
 
     return (
@@ -90,19 +103,21 @@ export const ForecastComponent = ({ days, city }) => {
                         {Object.keys(days).map((day, index) => (
                             <Card key={index}>
                                 <TextDay>{day}</TextDay>
-                                <div>
+                                <WeatherCardContainer>
                                     <Image
                                         src={`http://openweathermap.org/img/wn/${days[day][0].weather[0].icon}.png`}
                                         alt="Weather icon"
-                                        width={70}
-                                        height={70}
+                                        width={90}
+                                        height={90}
                                     />
-                                    <h1>{`${days[day][0].main.temp}°C`}</h1>
-                                    <h5>{days[day][0].weather[0].description}</h5>
-                                </div>
+                                    <TextContainer>
+                                        <h1>{`${Math.round(days[day][0].main.temp)}°C`}</h1>
+                                        <h5>{days[day][0].weather[0].description}</h5>
+                                    </TextContainer>
+                                </WeatherCardContainer>
                                 <MinMaxTextContainer>
-                                    <MinMaxText>{`Min: ${days[day][0].main.temp_min}°C`}</MinMaxText>
-                                    <MinMaxText>{`Max: ${days[day][0].main.temp_max}°C`}</MinMaxText>
+                                    <MinMaxText>{`Min: ${Math.round(days[day][0].main.temp_min)}°C`}</MinMaxText>
+                                    <MinMaxText>{`Max: ${Math.round(days[day][0].main.temp_max)}°C`}</MinMaxText>
                                 </MinMaxTextContainer>
                             </Card>
                         ))}
