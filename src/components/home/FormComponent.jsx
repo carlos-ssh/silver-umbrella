@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { useEffect, useRef } from 'react'
 
 const FormContainer = styled.div`
     display: flex;
@@ -19,6 +20,12 @@ export const FormComponent = ({
     handleInputChange,
     selectedPlace
 }) => {
+    const inputRef = useRef(null)
+
+    useEffect(() => {
+        inputRef.current.focus()
+    }, [])
+
     return (
         <FormContainer>
             <Input
@@ -26,6 +33,7 @@ export const FormComponent = ({
                 placeholder="Buscar un ciudad..."
                 onChange={handleInputChange}
                 value={selectedPlace}
+                ref={inputRef}
             />
         </FormContainer>
     )
