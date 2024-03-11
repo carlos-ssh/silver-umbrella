@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 const FooterContainer = styled.div`
-    position: sticky;
+    position: absolute;
     bottom: 0;
     justify-content: center;
     align-items: center;
@@ -16,7 +16,7 @@ const FooterContainer = styled.div`
     color: #fff;
     background-color: #333;
     font-weight: bold;
-`
+`;
 
 const FooterComponent = () => {
     return (

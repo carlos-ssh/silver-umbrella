@@ -5,10 +5,11 @@ import './globals.css'
 import FooterComponent from '@/components/navigation/FooterComponent'
 
 const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
 `
 
 export default function Home() {
