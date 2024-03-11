@@ -49,8 +49,8 @@ export const IndexComponent = () => {
 
     useEffect(() => {
         const success = (position) => {
-            const latitude = position.latitude
-            const longitude = position.longitude
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
             setLocation({ latitude, longitude })
         }
 
