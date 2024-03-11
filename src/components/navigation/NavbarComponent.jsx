@@ -5,7 +5,6 @@ import styled from '@emotion/styled'
 const NavbarContainer = styled.div`
     background-color: #000;
     color: #f9f9f9;
-    width: 100%;
     min-height: 60px;
     display: flex;
     align-items: center;

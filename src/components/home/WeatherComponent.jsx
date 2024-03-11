@@ -2,7 +2,6 @@ import styled from '@emotion/styled'
 
 const WeatherContainer = styled.div`
     display: flex;
-    width: 100%;
     background-image: url(${props => props.backgroundImageUrl});
     background-size: cover;
     background-position: center;

@@ -4,7 +4,6 @@ import { NavbarComponent } from '@/components/navigation/NavbarComponent'
 import { IndexComponent } from '@/components/home/IndexComponent'
 
 const MainContainer = styled.div`
-    color: #f9f9f9;
     width: 100%;
 `
 

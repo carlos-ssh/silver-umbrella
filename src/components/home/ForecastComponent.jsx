@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import styled from '@emotion/styled'
 
+const ForecastContainer = styled.div`
+    overflow-x: hidden;
+`
 const CardsContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    width: 100%;
     border-radius: 10px;
     margin: 0 auto;
 
@@ -23,8 +24,6 @@ const CardsContainer = styled.div`
 `
 
 const Card = styled.div`
-    width: 100%;
-    padding: 10px;
     background-color: #f9f9f9;
     border-radius: 10px;
     margin: 0 10px;
@@ -72,7 +71,7 @@ const MinMaxText = styled.p`
 export const ForecastComponent = ({ days, city }) => {
 
     return (
-        <div>
+        <ForecastContainer>
             <h3>El clima en los siguientes 5 días en { city }</h3>
             { days ? (
                     <CardsContainer>
@@ -95,7 +94,7 @@ export const ForecastComponent = ({ days, city }) => {
                         ))}
                     </CardsContainer>
                 ) : (<p>Cargando datos del clima...</p>)}
-        </div>
+        </ForecastContainer>
     )
 }
 
