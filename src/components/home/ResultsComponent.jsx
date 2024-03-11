@@ -6,11 +6,12 @@ const ResultsContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 10px;
-    width: 100%;
     max-height: 90%;
-    z-index: 10;
-    position: relative;
-    z-index: 1000;
+    margin-top: 100px;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 50;
 `
 
 const Container = styled.div`
@@ -19,14 +20,14 @@ const Container = styled.div`
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4;
     color: #333;
     border-radius: 10px;
     max-height: 500px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-
+    border: 1px solid #e1e0e0;
 
     &::-webkit-scrollbar {
         display: none;
@@ -34,7 +35,6 @@ const Container = styled.div`
 `
 
 const EachResult = styled.div`
-    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,10 +42,12 @@ const EachResult = styled.div`
     cursor: pointer;
     text-decoration: none;
     text-align: center;
+    background-color: transparent;
+    width: 100%;
 
     &:hover {
         background-color: #cbcbcb;
-        width: 95%;
+        width: 100%;
     }
 
     &:active {

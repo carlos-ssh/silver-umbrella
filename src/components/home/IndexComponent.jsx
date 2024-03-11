@@ -9,12 +9,10 @@ import { WeatherComponent } from './WeatherComponent'
 import { ForecastComponent } from './ForecastComponent'
 
 const MainContainer = styled.div`
-    background-color: #d4d4d4;
     opacity: 0.9;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 15px 10px;
     z-index: -10;
 
     @media (max-width: 768px) {
