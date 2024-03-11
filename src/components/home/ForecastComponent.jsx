@@ -34,14 +34,16 @@ const CardsContainer = styled.div`
 `
 
 const Card = styled.div`
-    background-color: #f9f9f9;
+    background-color: #cdc3c3;
     border-radius: 10px;
-    margin: 0 10px;
+    margin: 10px;
     color: #333;
     cursor: pointer;
+    min-width: 220px;
+    padding: 20px;
 
     @media (max-width: 768px) {
-        min-width: 180px;
+        min-width: 220px;
     }
 
     &:hover {

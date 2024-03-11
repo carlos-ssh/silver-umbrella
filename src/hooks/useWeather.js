@@ -6,11 +6,11 @@ export const useWeather = (location, appId) => {
 
     useEffect(() => {
         if (location?.latitude && location?.longitude) {
-        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=${appId}`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location.latitude}&lon=${location.longitude}&units=metric&appid=${appId}&lang=es`)
             .then(response => response.json())
             .then(data => {
-            setWeather(data);
-            setCity({city: data.name});
+                setWeather(data);
+                setCity({city: data.name});
             })
             .catch(error => console.error("Failed to fetch weather data:", error));
         }

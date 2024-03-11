@@ -7,9 +7,10 @@ const ResultsContainer = styled.div`
     align-items: center;
     padding: 10px;
     width: 100%;
-    max-height: 500px;
+    max-height: 90%;
     z-index: 10;
     position: relative;
+    z-index: 1000;
 `
 
 const Container = styled.div`
@@ -17,16 +18,15 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px;
+    padding: 5px;
     background-color: #f9f9f9;
     color: #333;
-    width: 100%;
     border-radius: 10px;
     max-height: 500px;
     overflow-y: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    z-index: 1000;
+
 
     &::-webkit-scrollbar {
         display: none;
@@ -34,8 +34,7 @@ const Container = styled.div`
 `
 
 const EachResult = styled.div`
-    padding: 10px;
-    width: 100%;
+    padding: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +45,7 @@ const EachResult = styled.div`
 
     &:hover {
         background-color: #cbcbcb;
+        width: 95%;
     }
 
     &:active {
