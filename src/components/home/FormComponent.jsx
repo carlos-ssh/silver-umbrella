@@ -6,6 +6,9 @@ const FormContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    background-color: #d4d2d2;
+    padding: 10px 0;
+    margin-bottom: 10px;
 `
 
 const Input = styled.input`

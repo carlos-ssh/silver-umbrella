@@ -9,6 +9,7 @@ const SearchContainer = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 10px;
 `
 
 const debounce = (func, wait) => {

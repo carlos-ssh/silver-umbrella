@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 
 const ForecastContainer = styled.div`
     overflow-x: hidden;
+    width: 100%;
 `
 
 const TitleDays = styled.h3`
@@ -66,7 +67,6 @@ const MinMaxTextContainer = styled.div`
     flex-direction: row;
     align-items: center;
     padding: 5px;
-    width: 100%;
 `
 
 const MinMaxText = styled.p`
@@ -90,14 +90,16 @@ export const ForecastComponent = ({ days, city }) => {
                         {Object.keys(days).map((day, index) => (
                             <Card key={index}>
                                 <TextDay>{day}</TextDay>
-                                <Image
-                                    src={`http://openweathermap.org/img/wn/${days[day][0].weather[0].icon}.png`}
-                                    alt="Weather icon"
-                                    width={70}
-                                    height={70}
+                                <div>
+                                    <Image
+                                        src={`http://openweathermap.org/img/wn/${days[day][0].weather[0].icon}.png`}
+                                        alt="Weather icon"
+                                        width={70}
+                                        height={70}
                                     />
-                                <h1>{`${days[day][0].main.temp}°C`}</h1>
-                                <h5>{days[day][0].weather[0].description}</h5>
+                                    <h1>{`${days[day][0].main.temp}°C`}</h1>
+                                    <h5>{days[day][0].weather[0].description}</h5>
+                                </div>
                                 <MinMaxTextContainer>
                                     <MinMaxText>{`Min: ${days[day][0].main.temp_min}°C`}</MinMaxText>
                                     <MinMaxText>{`Max: ${days[day][0].main.temp_max}°C`}</MinMaxText>
