@@ -42,6 +42,18 @@ const DegreesText = styled.h1`
     font-size: 3.5em;
 `
 
+const MainWeatherContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0.1;
+`
+
+const DataWeather = styled.div`
+    line-height: 0.1;
+`
+
 const WeatherDescription = styled.div`
     display: flex;
     flex-direction: row;
@@ -51,29 +63,50 @@ const WeatherDescription = styled.div`
 `
 
 const MinMaxContainer = styled.div`
-    width: 100%;
     display: flex;
+    width: 100%;
     flex-direction: row;
-    justify-items: space-between;
+    justify-content: space-around;
+    text-align: center;
+`
+
+const MinContainer = styled.div`
+    font-size: 20px;
+    line-height: 0.1;
+`
+
+const MaxContainer = styled.div`
+    font-size: 20px;
+    line-height: 0.1;
 `
 
 export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
     return (
-        <WeatherContainer backgroundImageUrl={backgroundImageUrl}>
+        <WeatherContainer backgroundImageUrl={ backgroundImageUrl }>
             {weather ? (
                 <div>
                     <DisplayWeather>
-                        <h2>{weather.name || city}</h2>
-                        <DegreesText>{`${weather.main.temp}°C`}</DegreesText>
-                        <p>{`${weather.weather[0].description}`}</p>
+                        <MainWeatherContainer>
+                            <DegreesText>{`${ weather.main.temp }°C`}</DegreesText>
+                            <DataWeather>
+                                <h2>{ weather.name || city }</h2>
+                                <p>{`${ weather.weather[0].description }`}</p>
+                            </DataWeather>
+                        </MainWeatherContainer>
                         <MinMaxContainer>
-                            <p>{`Min ${weather.main.temp_min}`}</p>
-                            <p>{`Max ${weather.main.temp_max}`}</p>
+                            <MinContainer>
+                                <p>{ weather.main.temp_min }</p>
+                                <p>Min</p>
+                            </MinContainer>
+                            <MaxContainer>
+                                <p>{ weather.main.temp_max }</p>
+                                <p>Max</p>
+                            </MaxContainer>
                         </MinMaxContainer>
                     </DisplayWeather>
                     <WeatherDescription>
-                        <p>{`Humedad: ${weather.main.humidity}%`}</p>
-                        <p>{`Viento: ${weather.wind.speed} m/s`}</p>
+                        <p>{`Humedad: ${ weather.main.humidity }%`}</p>
+                        <p>{`Viento: ${ weather.wind.speed } m/s`}</p>
                     </WeatherDescription>
                 </div>
             ) : (
