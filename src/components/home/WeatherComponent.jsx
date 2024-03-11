@@ -82,31 +82,31 @@ const MaxContainer = styled.div`
 
 export const WeatherComponent = ({ weather, city, backgroundImageUrl }) => {
     return (
-        <WeatherContainer backgroundImageUrl={backgroundImageUrl}>
+        <WeatherContainer backgroundImageUrl={ backgroundImageUrl }>
             {weather ? (
                 <div>
                     <DisplayWeather>
                         <MainWeatherContainer>
-                            <DegreesText>{`${weather.main.temp}°C`}</DegreesText>
+                            <DegreesText>{`${ weather.main.temp }°C`}</DegreesText>
                             <DataWeather>
-                                <h2>{weather.name || city}</h2>
-                                <p>{`${weather.weather[0].description}`}</p>
+                                <h2>{ weather.name || city }</h2>
+                                <p>{`${ weather.weather[0].description }`}</p>
                             </DataWeather>
                         </MainWeatherContainer>
                         <MinMaxContainer>
                             <MinContainer>
-                                <p>{weather.main.temp_min}</p>
+                                <p>{ weather.main.temp_min }</p>
                                 <p>Min</p>
                             </MinContainer>
                             <MaxContainer>
-                                <p>{weather.main.temp_max}</p>
+                                <p>{ weather.main.temp_max }</p>
                                 <p>Max</p>
                             </MaxContainer>
                         </MinMaxContainer>
                     </DisplayWeather>
                     <WeatherDescription>
-                        <p>{`Humedad: ${weather.main.humidity}%`}</p>
-                        <p>{`Viento: ${weather.wind.speed} m/s`}</p>
+                        <p>{`Humedad: ${ weather.main.humidity }%`}</p>
+                        <p>{`Viento: ${ weather.wind.speed } m/s`}</p>
                     </WeatherDescription>
                 </div>
             ) : (
