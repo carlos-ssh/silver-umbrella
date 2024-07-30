@@ -33,7 +33,7 @@ export const FormComponent = ({
         <FormContainer>
             <Input
                 type="text"
-                placeholder="Buscar un ciudad..."
+                placeholder="Buscar una ciudad..."
                 onChange={handleInputChange}
                 value={selectedPlace}
                 ref={inputRef}

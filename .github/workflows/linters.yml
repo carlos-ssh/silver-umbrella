@@ -1,4 +1,4 @@
-name: Reservamos CI/CD
+name: SkyBite CI/CD
 
 on: pull_request
 

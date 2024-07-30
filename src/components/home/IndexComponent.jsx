@@ -7,6 +7,7 @@ import { useBackgroundImage } from '@/hooks/useBackgroundImage'
 import { SearchComponent } from './SearchComponent'
 import { WeatherComponent } from './WeatherComponent'
 import { ForecastComponent } from './ForecastComponent'
+import { WeatherOutfitComponent } from './WeatherOutfitComponent'
 
 const MainContainer = styled.div`
     opacity: 0.9;
@@ -33,13 +34,20 @@ const DaysContainer = styled.div`
     color: #000;
 `
 
+const ContentContainer = styled.div`
+    width: 100%;
+`
+const OutfitContainer = styled.div`
+    width: 100%;
+`
+
 export const IndexComponent = () => {
     const [location, setLocation] = useState({ latitude: null, longitude: null })
     const [error, setError] = useState('')
     const [isContainerVisible, setIsContainerVisible] = useState('')
 
     const appId = process.env.NEXT_PUBLIC_OPENWEATHER_APP_ID;
-    const clientId = process.env.NEXT_PUBLIC_UNSPLASH_CLIENT_ID;
+    const clientId = process.env.NEXT_PUBLIC_PIXABAY_CLIENT_ID;
 
     const { weather, city } = useWeather(location, appId)
     const { forecast, days } = useForecast(location, appId)
@@ -94,13 +102,23 @@ export const IndexComponent = () => {
                 )}
             </MainContainer>
             {forecast && (
-                <DaysContainer>
-                    <ForecastComponent
-                        forecast={forecast}
-                        days={days}
-                        city={weather.name}
-                    />
-                </DaysContainer>
+                <ContentContainer>
+                    <DaysContainer>
+                        <ForecastComponent
+                            forecast={forecast}
+                            days={days}
+                            city={weather.name}
+                        />
+                    </DaysContainer>
+                    <OutfitContainer>
+                        <WeatherOutfitComponent
+                            forecast={forecast}
+                            days={days}
+                            city={weather.name}
+                        />
+                    </OutfitContainer>
+                </ContentContainer>
+                
             )}
         </div>
     );

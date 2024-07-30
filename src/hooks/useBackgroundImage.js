@@ -1,22 +1,27 @@
-import { useState } from 'react'
+import { useState } from 'react';
 
 export const useBackgroundImage = () => {
-    const [backgroundImageUrl, setBackgroundImageUrl] = useState(null);
+  const [backgroundImageUrl, setBackgroundImageUrl] = useState(null);
 
-    const fetchBackgroundImage = async (query, clientId) => {
-        if (query) {
-            try {
-                const response = await fetch(`https://api.unsplash.com/search/photos?query=${query}&lang=es&client_id=${clientId}`);
-                const data = await response.json();
-                if (data.results.length > 0) {
-                    const imageUrl = data.results[0].urls.regular;
-                    setBackgroundImageUrl(imageUrl);
-                }
-            } catch (error) {
-                console.error("Failed to fetch image data:", error);
-            }
+  const fetchBackgroundImage = async (query, clientId) => {
+    if (query) {
+      try {
+        const encodedQuery = encodeURIComponent(query);
+        const response = await fetch(`https://pixabay.com/api/?key=${clientId}&q=${encodedQuery}&image_type=photo`);
+        const data = await response.json();
+        
+        console.log(data[0])
+        if (data.hits && data.hits.length > 0) {
+          const imageUrl = data.hits[3].webformatURL;
+          setBackgroundImageUrl(imageUrl);
+        } else {
+          console.error("No images found");
         }
-    };
+      } catch (error) {
+        console.error("Failed to fetch image data:", error);
+      }
+    }
+  };
 
-    return { backgroundImageUrl, fetchBackgroundImage };
+  return { backgroundImageUrl, fetchBackgroundImage };
 };

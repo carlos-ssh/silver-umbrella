@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 const ForecastContainer = styled.div`
     overflow-x: hidden;
     width: 100%;
+    max-width: 1340px;
+    margin: 0 auto;
 `
 
 const TitleDays = styled.h3`
@@ -42,6 +44,7 @@ const Card = styled.div`
     cursor: pointer;
     min-width: 220px;
     padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 
     @media (max-width: 768px) {
         min-width: 220px;
@@ -49,10 +52,12 @@ const Card = styled.div`
 
     &:hover {
         background-color: #cbcbcb;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     }
 
     &:active {
         background-color: #acacac;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 
 `

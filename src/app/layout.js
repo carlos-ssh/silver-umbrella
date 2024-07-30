@@ -3,8 +3,8 @@ import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Reservando Weather",
-  description: "Encuentra el clima de tus destinos favoritos, dentro de México y los EUA",
+  title: "SkyBite",
+  description: "Encuentra el clima, su gastronomia de tus destinos favoritos con la IA",
 };
 
 export default function RootLayout({ children }) {

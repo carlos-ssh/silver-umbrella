@@ -4,13 +4,11 @@ runme:
   version: v3
 ---
 
-# 🚀 Running Reservamos - Weather Project Locally
+# 🚀 SkyBite Project
 
-[![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
+[![SkyBite CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
 
-[![Reservamos CI/CD](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml/badge.svg)](https://github.com/carlos-ssh/silver-umbrella/actions/workflows/linters.yml)
-
-Welcome to Reservamos - Weather project! This guide is here to walk you through getting your project up and running on your local machine. Before we dive in, ensure you have `Node.js` installed on your system. This project requires two environment variables to function correctly.
+Welcome to SkyBite project! This guide is here to walk you through getting your project up and running on your local machine. Before we dive in, ensure you have `Node.js` installed on your system. This project requires two environment variables to function correctly.
 
 ## 📋 Prerequisites
 

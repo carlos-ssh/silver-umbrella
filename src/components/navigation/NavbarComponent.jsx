@@ -22,7 +22,7 @@ export const NavbarComponent = () => {
     return (
         <NavbarContainer>
             <Link href='/' passHref legacyBehavior>
-                <NavTitleLink>Reservamos</NavTitleLink>
+                <NavTitleLink>🌮 SkyBite</NavTitleLink>
             </Link>
         </NavbarContainer>
     )

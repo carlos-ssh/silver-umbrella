@@ -41,6 +41,7 @@ const DisplayWeather = styled.div`
     text-align: center;
     line-height: 0.5;
 `
+
 const DegreesText = styled.h1`
     font-size: 3.5em;
 `
@@ -61,7 +62,7 @@ const WeatherDescription = styled.div`
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-items: space-around;
+    justify-items: space-evenly;
     gap: 10px;
 `
 
